@@ -1,0 +1,12 @@
+body {
+  padding-top: 5vh;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+.logo-name{
+  font-size: 72px;
+  background: -webkit-linear-gradient(#2ac2f5, #2bf411);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
