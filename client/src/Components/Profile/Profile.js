@@ -83,7 +83,7 @@ const Profile = () => {
             <ul className='d-flex justify-content-evenly bg-body-tertiary py-3 px-0 rounded text-center'>
 
                 <li className='d-inline top-prof-nav' >
-                    <Link to={{ pathname: `/profile/${id}/posts`, state: { img: profileInfo.img === "" ? profileInfo.defImg : profileInfo.img } }}>
+                    <Link to={{ pathname: `/profile/${id}/posts` }}>
                         <div><i className="bi bi-postcard fs-4"></i></div>
                         Posts</Link>
                 </li>
@@ -93,7 +93,6 @@ const Profile = () => {
                         <div><i class="bi bi-journal fs-4"></i></div>
                         About</Link>
                 </li>
-
 
                 <li className='d-inline top-prof-nav' >
                     <Link to={`/profile/${id}/friends`}>

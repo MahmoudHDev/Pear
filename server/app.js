@@ -30,6 +30,21 @@ app.get('/', (req, res) => {
 
 });
 
+app.post('/posts', async (req, res) => {
+
+    if (req.body.id !== "") {
+        const userData = await User.findById(req.body.id);
+
+
+        const { password, ...rest } = Object.assign({}, userData._doc);
+
+        res.send({ status: true, data: rest })
+    } else {
+        res.send({ status: false })
+    }
+});
+
+
 app.post('/register', (req, res) => {
     const newUser = new User(req.body)
     newUser.save()
